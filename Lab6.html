@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Canvas | Lab 6</title>
+    <style>
+        #can{
+            border: 1px solid ;
+            background-color: rgb(190, 190, 190);
+        }
+    </style>
+</head>
+<body>
+    <canvas id="can" width="600px" height="500px">
+
+    </canvas>
+    <script>
+        const canva = document.getElementById('can');
+
+        let can = canva.getContext('2d');
+
+        //This code is programmed by AV.
+        // Rectangle box
+        can.beginPath()
+        can.fillStyle = 'yellow'
+        can.fillRect(22, 22, 230, 130)
+
+        // Rectangle box with Gradient colors
+        can.beginPath()
+        let gradient = can.createLinearGradient(100, 50, 800, 100);
+        gradient.addColorStop(0, 'red');
+        gradient.addColorStop(0.8, 'rgb(0, 0, 255)');
+        can.fillStyle = gradient;
+        can.fillRect(340, 22, 230, 130);
+
+        // Diagonal Line
+        can.beginPath()
+        can.moveTo(0,0)
+        can.lineTo(600,500)
+        can.lineWidth = 2
+        can.strokeStyle = 'white'
+        can.stroke()
+
+        // Circle in Center position
+        can.beginPath()
+        can.arc(300, 250, 80, 0, Math.PI*2)
+        can.stroke()
+
+        // Text in the Canvas
+        can.beginPath();
+        can.fillStyle = 'black'
+        can.textWidth = 10
+        can.font = '40px calibri'
+        can.fillText('Canvas Lab', 200, 470)
+        can.fill();
+        
+
+        
+    </script>
+</body>
+</html>

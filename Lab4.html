@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 4</title>
+    <style>
+        body{
+             max-width: 80%;
+             margin: 50px auto;
+             height: 800px;
+        }
+        table{  
+           
+            width: 100%;
+            border-spacing: 3px; 
+            text-align: center;
+        }
+        caption{
+            color: rgb(7, 76, 137);
+            font-size: 25px;
+            padding: 10px;
+            font-weight: 600;
+        }
+
+        th{
+            padding: 10px;
+            border: 2px solid black;
+            background-color: rgb(144, 207, 255);
+        }
+
+        td{
+            padding: 10px;
+            border: 2px dashed rgb(112, 165, 250);
+            background-color: rgb(226, 246, 255);
+        }
+        .end td{
+            line-height: 60px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption> Company Employee Directory</caption>
+        <tr>
+            <th colspan="2" width="50%">Employee Info</th>
+            <th colspan="2">Job Details</th>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Job Title</th>
+            <th>Location</th>
+        </tr>
+
+        <tr>
+            <td rowspan="2">Anita Sharma</td>
+            <td>Marketing</td>
+            <td>Marketing Manager</td>
+            <td>New York</td>
+        </tr>
+
+        <tr>
+            <td>Sales</td>
+            <td>Sales Executive</td>
+            <td>New York</td>
+        </tr>
+
+        <tr>
+            <td>Ravi Kumar</td>
+            <td>IT</td>
+            <td>Software Developer</td>
+            <td>San Fransisco</td>
+        </tr>
+
+        <tr class="end">
+            <td>Priya Singh</td>
+            <td>HR</td>
+            <td>HR Manager</td>
+            <td>Chicago</td>
+        </tr>
+    </table>
+</body>
+</html>

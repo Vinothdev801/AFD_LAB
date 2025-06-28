@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 5</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Internship Job Application Form</h1>
+
+        <form action="result.html" method="get">
+            <div>
+                <label for="name">Full Name:</label>
+                <input type="text" name="name" id="name" value="Candidate" size="20" placeholder="Enter name" required>
+            </div>
+            <div>
+                <label for="email">Email Address:</label>
+                <input type="email" name="email" id="email" size="20" placeholder="example@gmail.com" required>
+            </div>
+            <div>
+                <label for="number">Phone Number:</label>
+                <input type="number" name="number" id="number" min="10" placeholder="10-digit number" required>
+            </div>
+            <div>
+                <label for="pass">Create Password:</label>
+                <input type="password" name="pass" id="pass" min="5" size="20" placeholder="minimum 5 characters" required>
+            </div>
+            <div>
+                <label>Gender: </label> <br>
+
+                <input type="radio" name="gender" id="male" value="male">
+                <label for="male"> Male</label> <br>
+
+                <input type="radio" name="gender" id="female" value="female">
+                <label for="female">Female</label> <br>
+
+                <input type="radio" name="gender" id="non" value="PNTS">
+                <label for="non">Prefer not to say</label> <br>
+            </div>
+
+            <div>
+                <label for="sdate">Availabel Start Date: </label>
+                <input type="date" name="sdate" id="sdate">
+            </div>
+            <div>
+                <label> Preferred Location</label> <br>
+
+                <input type="checkbox" name="location" id="chennai">
+                <label for="chennai"> Chennai</label> <br>
+
+                <input type="checkbox" name="location" id="Banglore">
+                <label for="Banglore">Banglore</label> <br>
+
+                <input type="checkbox" name="location" id="Remote">
+                <label for="Remote">Remote</label> <br>
+            </div>
+
+            <div>
+                <label for="Bio"> Short Bio:</label><br>
+                <textarea name="shortbio" id="Bio" cols="40" rows="6">Write short breif about yourself...</textarea>
+            </div>
+
+            <div>
+                <button type="submit"> Submit Application</button>
+                <button type="reset">Reset Form</button>
+            </div>
+        </form>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 9</title>
+
+    <style>
+        body{
+            background-color: rgb(239, 239, 239);
+            font-family:  Tahoma,Verdana;
+        }
+        .container{
+            max-width: 800px;
+            margin: 20px auto;
+            width: 400px;
+            background-color: white;
+            height: fit-content;
+            padding: 10px 15px;
+            border-radius: 10px;
+            box-shadow: 1px 1px 10px .1px grey;
+        }
+        form{
+            max-width: 90%;
+            margin: 0px auto;
+        }
+        h2, h1{
+            text-align: center;
+        }
+        label{
+            font-size: 18px;
+            font-weight: bold;
+            text-align: right;
+        }
+        input, textarea{
+            width: 90%;
+        }
+
+        input{
+            padding: 15px;
+        }
+        textarea{
+            /* padding: 50px 15px; */
+            width: 97%;
+            height: 150px;
+        }
+        button{
+            text-align: center;
+            margin: 20px 0px;
+            padding: 10px 150px;
+            border-radius: 5px;
+            border: 0px;
+            background-color: rgb(36, 199, 24);
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        
+        #count{
+            margin: 0px 0px 10px 0px;
+            text-align: right;
+            font-size: 15px;
+            color: lightslategrey;
+        }
+
+        #msg{
+            text-align: center;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <h1>Javascript Events Practice</h1>
+    <div class="container">
+         <h2>Student Feedback</h2>
+        <form id="form">
+            <label for="name">Name:</label><br>
+            <input type="text" name="name" maxlength="50" id="name">
+            <p id="count">(0 / 50) Characters typed</p>
+
+            <label for="feedback">Feedback:</label><br>
+            <textarea name="FeedBack" id="feedback"></textarea><br>
+
+            <button type="submit" id="btn">Submit</button>
+        </form>
+        <p id="msg"></p>
+    </div>
+
+    <script>
+        // All code in this tag are typed by AV by refering sources.
+        // This not an Ai generated code.
+
+       const name = document.getElementById('name');
+       const count = document.getElementById('count');
+       const btn = document.getElementById('btn');
+       const msg = document.getElementById('msg');
+       const form = document.getElementById('form');
+
+       //This for Character counting based on the input
+       name.addEventListener('input', function (){
+        let currentLength = name.value.length;
+        count.textContent = `(${currentLength} / 50) Characters typed`;
+       })
+
+       // This for mouse Events
+       btn.addEventListener('mouseout', function(){
+        btn.style.backgroundColor = 'rgb(38, 136, 247)';
+       })
+
+       btn.addEventListener('mouseover', function(){
+        btn.style.backgroundColor = 'black';
+       })
+
+       // This is for message
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        const textArea = document.getElementById('feedback').value;
+        msg.textContent = `Thank You ${name.value}! Your Feedback: ${textArea}`;
+        msg.style.color = 'rgb(36, 199, 24)';
+      })
+
+        
+    </script>
+</body>
+</html>

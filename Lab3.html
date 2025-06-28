@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 3 | Tables</title>
+    <style>
+        body{
+            width: 95%;
+            margin: 10px auto;
+            height: 800px;
+            
+        }
+        caption{
+            font-weight: bold;
+            font-size: x-large;
+            margin: 20px auto;
+        }
+        table{
+            width: 100%;   
+        }
+        tr{
+            margin: 200px auto;
+        }
+        th, td{
+            
+           padding: 10px 30px;
+           text-align: center; 
+           border: 2px solid black;
+        }
+        th{
+            color: white;
+            background-color: rgb(3, 183, 3);
+            
+        }
+        #break{
+            background-color:rgb(253, 186, 159);
+        }
+        .row1 td, .row3 td{
+            background-color: rgb(244, 251, 251);
+        }
+
+    </style>
+</head>
+<body>
+    <table cellspacing="4">
+        <caption>Weekly Class Timetable</caption>
+        <thead>
+            <tr id="heading">
+                <th>Time</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="row1">
+                <td>9:00 - 10.00</td>
+                <td>English</td>
+                <td>Math</td>
+                <td>Science</td>
+                <td>English</td>
+                <td>Tamil</td>
+            </tr>
+
+            <tr class="row2">
+                <td>10:00 - 10.15</td>
+                <td colspan="5" id="break">Break</td>
+            </tr>
+
+            <tr class="row3">
+                <td>10:15 - 11:00</td>
+                <td>Math</td>
+                <td>Science</td>
+                <td>Tamil</td>
+                <td>Computer</td>
+                <td>Math</td>
+            </tr>
+
+            <tr class="row4">
+                <td>11:00 - 12:00</td>
+                <td>Science</td>
+                <td>Tamil</td>
+                <td>English</td>
+                <td>Math</td>
+                <td>Computer</td>
+            </tr>
+            
+        </tbody>
+    </table>
+</body>
+</html>

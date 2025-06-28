@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 8</title>
+    <style>
+        span{
+            color: red;
+        }
+        button{
+            padding: 10px 15px;
+            margin: auto 5px;
+            color: rgb(255, 255, 255);
+            border-radius: 5px;
+            cursor: pointer;
+            
+        }
+        #change{
+            background-color: rgb(1, 250, 1);
+        }
+        #highlight{
+            background-color: rgb(253, 116, 116);
+        }
+        #btnColor{
+            background-color: rgb(0, 106, 255);
+        }
+    </style>
+</head>
+<body>
+    <h1>Student Names</h1>
+
+    <p>Santhosh</p>
+    <p>Nicks AB</p>
+    <p>Rabi</p>
+
+    <h3 id="status">Status: <span>Absent</span></h3>
+
+    <button class="btn" id="highlight">Highlight All Names</button>
+    <button class="btn" id="change">Change Status</button>
+    <button class="btn" id="btnColor">Color All Buttons</button>
+
+    <script>
+        // function eventHandlers(){
+
+            // for highlighting Paragraphs
+            let markup = document.getElementById('highlight');
+            markup.addEventListener('click', function (){
+            
+                let p = document.querySelectorAll('p');
+                for(let i = 0; i < p.length; i++){
+                    p[i].style.backgroundColor = 'lightgreen'
+                }
+            });
+
+            // for status in view
+            let change = document.getElementById('change');
+            change.addEventListener('click', function (){
+                let status = document.getElementById('status');
+                status.textContent = 'Status: Present';
+                status.style.color = 'green';
+            });
+
+            // for buttons
+            let colorBTN = document.querySelector("#btnColor");
+            colorBTN.addEventListener('click', function (){
+                let Btn = document.querySelectorAll('.btn');
+                for(let i = 0; i < Btn.length; i++){
+                    Btn[i].style.color = 'cyan';  
+                }     
+                
+            });
+           
+        
+
+        
+
+        
+
+       
+
+        
+    </script>
+</body>
+</html>
