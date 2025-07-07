@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lab 11</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -11,10 +11,10 @@
         <div class="nav">
             <div class="logo">LOGO</div>
             <nav>
-                <a href="">Home </a>
-                <a href="">About</a>
-                <a href="">Service</a>
-                <a href="">Contact</a>
+                <a href="#">Home </a>
+                <a href="#">About</a>
+                <a href="#">Service</a>
+                <a href="#">Contact</a>
             </nav>
             <button id="tkbtn">Take Action</button>
         </div>
@@ -42,26 +42,26 @@
             Placeat, rerum omnis dolorum quibusdam expedita velit, nostrum debitis aut, tempore minus 
             distinctio ex recusandae fugiat! Eum, saepe.</p>
             <div class="cards">
-                <div class="card1">
+                <div class="card">
                     <h3>🌿 Eco-Tourism Planning</h3>
                     <p>Discover breathtaking natural destinations with our expertly crafted eco-tours. 
                         From serene forests to exotic wildlife sanctuaries, we ensure every journey supports 
                         sustainability and local communities.
                     </p>
                 </div>
-                <div class="card2">
+                <div class="card">
                     <h3>🌱 Wildlife Conservation</h3>
                     <p>Our team collaborates with global organizations to protect endangered species and restore 
                         habitats. Join our mission to preserve Earth's biodiversity for future generations.
                     </p>
                 </div>
-                <div class="card3">
+                <div class="card">
                     <h3>🌊 Environmental Education</h3>
                     <p>We offer interactive workshops, nature trails, and online courses to foster environmental 
                         awareness. Learn about ecosystems, climate change, and ways to live greener.
                     </p>
                 </div>
-                <div class="card4">
+                <div class="card">
                     <h3>🏞️ Sustainable Landscaping</h3>
                     <p>Transform your outdoor spaces with nature-inspired, eco-friendly designs. Our experts 
                         specialize in native plant gardening, water-wise systems, and habitat-friendly layouts.
@@ -130,7 +130,7 @@
                 <h2>Subscribe Now</h2>
                 <span></span>
                 <p>Subscribe to  stay for new offers and latest updates.</p>
-                <form action="">
+                <form id="form">
                     <input type="email" placeholder="Enter the email Address"> &nbsp; 
                     <button type="submit">Subscribe</button>
                 </form>
@@ -138,5 +138,22 @@
     </footer>
     <hr>
     <div class="copy">&copy; All copyrights are reserved by AV.</div>
+    <script>
+        const card = document.getElementsByClassName('card');
+        
+        for (let i = 0; i < card.length; i++) {
+            card[i].addEventListener('mouseover', () => {
+                card[i].style.transform = 'scale(1.1)';
+            });
+
+            card[i].addEventListener('mouseout', () => {
+                card[i].style.transform = 'scale(1)';
+            });
+        }
+
+        document.getElementById('form').addEventListener('submit', (e)=>{
+            e.preventDefault();
+        })
+    </script>
 </body>
 </html>

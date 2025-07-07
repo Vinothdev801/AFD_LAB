@@ -30,11 +30,10 @@ header{
 .nav a{
     text-decoration: none;
     padding: 15px 25px;
-    color: white;
     background: linear-gradient(to right, #0a910f, #6b32fc);
     background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 17px;
+    color: transparent;
+    font-size: 1.2rem;
     font-weight: 600;
 }
 
@@ -46,6 +45,7 @@ header{
     border-radius: 5px;
     font-weight: bold;
     letter-spacing: 1px;
+    cursor: pointer;
 }
 .img-text{
     display: flex;
@@ -87,7 +87,7 @@ header{
     display: flex;
     justify-content: center;
 }
-.card1, .card2, .card3, .card4{
+.card{
     width: 260px;
     height: 200px;
     background-color: rgb(7, 140, 5);
@@ -95,6 +95,7 @@ header{
     margin: 40px 20px;
     border-radius: 15px;
     padding: 15px;
+    transition: transform 0.5s ease;
 }
 
 .cards h3{
@@ -160,6 +161,7 @@ form button{
     color: white;
     background-color: rgb(1, 159, 1);
     border: none;
+    cursor: pointer;
 }
 span{
     position: relative;
@@ -183,6 +185,5 @@ span::before{
     text-align: center;
     padding: 10px;
     letter-spacing: 1px;
-
     font-size: 13px;
 }
