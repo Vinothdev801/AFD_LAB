@@ -1,0 +1,109 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root{
+  background-color: black;
+}
+
+header {
+  width: 100%;
+  padding: 2rem 6rem;
+  color: white;
+  text-align: center;
+  background: linear-gradient(200deg, #6a11cb 10%, #2575fc 150%);
+  box-shadow: 0 2px 5px rgba(177, 26, 26, 0.107)
+}
+
+header div{
+  width: 600px;
+  margin: 0 auto;
+  padding: 10px 0px;
+}
+header div p{
+  padding-top: 20px;
+}
+
+.container{
+  display: flex;
+  width: 90%;
+  margin: 0px auto;
+  padding: 40px 40px;
+ 
+}
+
+.card1{
+  background-color: white;
+  width: 300px;
+  margin: 10px 50px;
+  padding: 20px 30px;
+  height: 20rem;
+  border-radius: 10px;
+  
+}
+.card1 ul li{
+  padding: 5px;
+  display: flex;
+  gap: 10px;
+}
+
+.card1 #lang{
+  flex-direction: column;
+  gap: 5px;
+}
+.card1 #lang p{
+  background-color: black;
+  color:white;
+  width: fit-content;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 15px;
+}
+
+.card2{
+  background-color: white;
+  margin: 10px 5px;
+  padding: 20px 30px;
+  border-radius: 10px;
+}
+.card2 ul{
+  display: inline-flex;
+  margin: 15px 10px;
+  list-style-type: none;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+
+.card2 ul li{
+  padding-right: 60px;
+  padding-block: 10px;
+}
+
+.card2 ul li h3{
+  padding-block: 5px;
+  border-bottom: 2px solid #b0b0b0;
+}
+
+.card2 ul li p{
+  color: #b0b0b0
+}
+
+span::before{
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, rgb(68, 68, 235), rgb(187, 114, 236));
+    border-radius: 20px;
+
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  color: white;
+}
+
