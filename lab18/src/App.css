@@ -1,0 +1,14 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.factorial_calculator{
+  width: 70%;
+  margin: 0px auto;
+  height: 350px;
+  border: 2px solid rgb(47, 255, 182);
+  border-radius: 15px;
+}
